@@ -18,10 +18,8 @@ public class Testinit {
 	List<WebElement> elements;
 	
 	public BasePage startandlaunchBrowser(String url){
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		capabilities.setCapability("marionette", true);
+		System.setProperty("webdriver.gecko.driver","E:\\Projects\\SeleniumPract\\drivers\\geckodriver\\geckodriver-v0.21.0-win64\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		//System.setProperty("webdriver.gecko.driver","D:\\Ash Backup\\Java\\geckodriver-v0.21.0-win64");
 		driver.manage().window().maximize();
 		SeleniumAction homepageactions = new SeleniumAction(driver);
 		driver.get(url);
