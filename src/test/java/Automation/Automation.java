@@ -18,8 +18,14 @@ public class Automation {
 	}
 	
 	@Test
-	public void startForm(){
-		action.StartPractising();
+	public void simpleFormTest(){
+		action.SimpleForm("Ashwani");
 	}
+	
+	@Test(dependsOnMethods = "simpleFormTest")
+	public void checkboxTest(){
+		action.Checkbox();
+	}
+	
 	
 }
