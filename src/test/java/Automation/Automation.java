@@ -27,5 +27,10 @@ public class Automation {
 		action.Checkbox();
 	}
 	
+	@Test(dependsOnMethods = "checkboxTest")
+	public void radioButtonTest(){
+		action.RadioButton();
+	}
+	
 	
 }

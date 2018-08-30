@@ -27,6 +27,7 @@ public class SeleniumAction extends UI{
 		getTotalButton().click();
 		String m1 = getTotalResult().getText();
 		System.out.println(m1);
+		System.out.println("<----------------Simple Form test successfully-------------->");
 	}
 	
 	public void Checkbox(){
@@ -38,6 +39,23 @@ public class SeleniumAction extends UI{
 		
 		checkOption1().click();
 //		checkAll().click();
+		System.out.println("<----------------Checkbox Form test successfully--------------------->");
+	}
+	
+	public void RadioButton(){
+		inputForm().click();
+		openRadioButtonForm().click();
+		radioButtonDemo().click();
+		getCheckedValue().click();
+		String s = getCheckedMessage().getText();
+		System.out.println(s);
+		
+		groupRadioButtonDemoSex().click();
+		groupRadioButtonDemoAgeGroup().click();
+		getValues().click();
+		String s1 = getValuesMessage().getText();
+		System.out.println(s1);
+		System.out.println("<--------------Radio Button Form test successfully--------------->");
 	}
 
 }
